@@ -35,7 +35,7 @@
 #define DE_6    N6    // 6
 #define DE_7    N7    // 7
 #define DE_8    N8    // 8
-#define DE_9    N8    // 9
+#define DE_9    N9    // 9
 #define DE_0    N0    // 0
 #define DE_SS   MINUS // ß
 #define DE_ACUT EQUAL  // ´ (dead)
