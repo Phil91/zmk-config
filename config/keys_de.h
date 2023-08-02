@@ -63,7 +63,7 @@
 #define DE_K    K    // K
 #define DE_L    L    // L
 #define DE_ODIA SEMI // Ö
-#define DE_ADIA SQT // Ä
+#define DE_ADIA SQT  // Ä
 #define DE_HASH NUHS // #
 // Row 4
 #define DE_LABK NUBS // <

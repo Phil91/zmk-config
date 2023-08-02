@@ -79,7 +79,14 @@
             compatible = "zmk,behavior-mod-morph";
             label = "DE_SQT_DQT";
             #binding-cells = <0>;
-            bindings = <&kp SQT>, <&kp APOS>;
+            bindings = <&kp DE_QUOT>, <&kp DE_DQUO>;
+            mods = <(LSHIFT|RSHIFT)>;
+        };
+        grv_tld: de-grv_tld {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DE_GRV_TLD";
+            #binding-cells = <0>;
+            bindings = <&kp DE_GRV>, <&kp DE_TILD>;
             mods = <(LSHIFT|RSHIFT)>;
         };
     };
@@ -89,10 +96,10 @@
 
         base_layer_de {
             bindings = <
-   &sqt_dqt    &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4 &kp KP_N5                           &kp KP_N6 &kp KP_N7 &kp KP_N8  &kp KP_N9 &kp KP_N0  &kp DEL
-   &kp ESC     &kp Q     &kp W     &kp E     &kp R     &kp T                               &kp Z     &kp U     &kp I      &kp O     &kp P      &kp BSPC
-   &kp TAB     &kp A     &kp S     &kp D     &kp F     &kp G                               &kp H     &kp J     &kp K      &kp L     &kp SEMI   &kp EQUAL
-   &kp LSHFT   &kp Y     &kp X     &kp C     &kp V     &kp B  &kp C_MUTE  &rgb_ug RGB_TOG  &kp N     &kp M     &kp DOT    &kp LPAR  &kp RPAR   &kp RSHFT
+   &sqt_dqt    &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N4 &kp KP_N5                           &kp KP_N6 &kp KP_N7 &kp KP_N8  &kp KP_N9    &kp KP_N0     &kp DEL
+   &kp ESC     &kp Q     &kp W     &kp E     &kp R     &kp T                               &kp DE_Z  &kp U     &kp I      &kp O        &kp P         &kp BSPC
+   &kp TAB     &kp A     &kp S     &kp D     &kp F     &kp G                               &kp H     &kp J     &kp K      &kp L        &kp DE_SCLN   &kp DE_EQL
+   &kp LSHFT   &kp DE_Y  &kp X     &kp C     &kp V     &kp B  &kp C_MUTE  &rgb_ug RGB_TOG  &kp N     &kp M     &kp DOT    &kp DE_LPRN  &kp DE_RPRN   &kp RSHFT
                    &kp LCTRL  &kp LALT  &kp LGUI   &mo 1   &kp RET        &kp SPACE   &mo 2  &kp RGUI   &kp RALT  &kp RCTRL
             >;
 
@@ -101,10 +108,10 @@
 
         sym_layer {
             bindings = <
-    &kp F1      &kp F2     &kp F3     &kp F4    &kp F5     &kp F6                     &kp F7     &kp F8       &kp F9     &kp F10   &kp F11   &kp F12
-    &kp GRAVE   &kp KP_N1  &kp KP_N2  &kp KP_N3 &kp KP_N4  &kp KP_N5                  &kp KP_N6  &kp KP_N7    &kp KP_N8  &kp KP_N9 &kp KP_N0 &kp BSPC
-    &kp TAB     &kp EXCL   &kp AT     &kp HASH  &kp DLLR   &kp PRCNT                  &kp CARET  &kp AMPS     &kp STAR   &kp LT    &kp GT    &kp PIPE
-    &kp LSHFT   &kp EQUAL  &kp MINUS  &kp PLUS  &kp LBRC   &kp RBRC  &trans   &trans  &kp LBKT   &kp RBKT     &kp SEMI   &kp COLON &kp FSLH  &kp UNDER
+    &kp F1      &kp F2     &kp F3       &kp F4      &kp F5        &kp F6                     &kp F7         &kp F8       &kp F9        &kp F10      &kp F11     &kp F12
+    &grv_tld    &kp KP_N1  &kp KP_N2    &kp KP_N3   &kp KP_N4     &kp KP_N5                  &kp KP_N6      &kp KP_N7    &kp KP_N8     &kp KP_N9    &kp KP_N0   &kp DE_BSLS
+    &kp TAB     &kp EXCL   &kp DE_AT    &kp DE_HASH &kp DE_DLR    &kp DE_PERC                &kp DE_CIRC    &kp DE_AMPR  &kp DE_ASTR   &kp DE_LABK  &kp DE_RABK &kp DE_PIPE
+    &kp LSHFT   &kp DE_EQL &kp DE_MINS  &kp DE_PLUS &kp DE_LCBR   &kp DE_RCBR  &trans   &trans  &kp DE_LBRC &kp DE_RBRC  &kp DE_SCLN   &kp DE_COLN  &kp DE_SLSH &kp DE_UNDS
                          &kp LCTRL  &kp LALT  &kp LGUI   &trans   &kp RET        &kp SPACE   &trans  &kp RGUI   &kp RALT  &kp RCTRL
             >;
 
@@ -113,7 +120,7 @@
 
         ctl_layer {
             bindings = <
-    &bt BT_CLR  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &trans       &trans                     &trans     &kp LA(LEFT)  &trans         &kp LA(RIGHT)   &trans    &trans
+    &bt BT_CLR  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &trans       &rgb_ug RGB_OFF            &trans     &kp LA(LEFT)  &trans         &kp LA(RIGHT)   &trans    &trans
     &kp ESC     &kp INS       &kp PSCRN     &kp K_CMENU     &trans       &trans                     &kp PG_UP  &kp LS(LEFT)  &kp UP         &kp LS(RIGHT)   &trans    &trans
     &kp TAB     &kp LALT      &kp LCTRL     &kp LSHFT       &trans       &kp CLCK                   &kp PG_DN  &kp LEFT      &kp DOWN       &kp RIGHT       &kp DEL   &trans
     &kp LSHFT   &kp K_UNDO    &kp K_CUT     &kp K_COPY      &kp K_PASTE  &trans     &trans  &trans  &trans     &kp DE_ADIA   &kp DE_ODIA    &kp DE_UDIA     &trans    &trans
