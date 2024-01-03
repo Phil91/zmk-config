@@ -35,7 +35,7 @@
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | TAB  |   !  |   @  |   #  |   $  |   %  |-------.    ,-------|  ^   |  &   |  *   |  <   |   >  |   |  |
  * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
- * |LShift|   =  |   -  |   +  |   {  |   }  |-------|    |-------|  [   |  ]   |  ;   |  :   |  /   |   _  |
+ * |LShift|   =  |   -  |   +  |   {  |   }  |-------|    |-------|  [   |  ]   |  ,   |  :   |  /   |   _  |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *            | LCTR | LAlt | LGUI | BASE | /SPACE  /       \ENTER \  |      | RGUI | RAlt | RCTR |
  *            |      |      |      |      |/       /         \      \ |      |      |      |      |
@@ -111,8 +111,8 @@
     &kp F1      &kp F2     &kp F3       &kp F4      &kp F5        &kp F6                     &kp F7         &kp F8       &kp F9        &kp F10      &kp F11     &kp F12
     &grv_tld    &kp KP_N1  &kp KP_N2    &kp KP_N3   &kp KP_N4     &kp KP_N5                  &kp KP_N6      &kp KP_N7    &kp KP_N8     &kp KP_N9    &kp KP_N0   &kp DE_BSLS
     &kp TAB     &kp EXCL   &kp DE_AT    &kp DE_HASH &kp DE_DLR    &kp DE_PERC                &kp DE_CIRC    &kp DE_AMPR  &kp DE_ASTR   &kp DE_LABK  &kp DE_RABK &kp DE_PIPE
-    &kp LSHFT   &kp DE_EQL &kp DE_MINS  &kp DE_PLUS &kp DE_LCBR   &kp DE_RCBR  &trans   &trans  &kp DE_LBRC &kp DE_RBRC  &kp DE_SCLN   &kp DE_COLN  &kp DE_SLSH &kp DE_UNDS
-                         &kp LCTRL  &kp LALT  &kp LGUI   &trans   &kp RET        &kp SPACE   &trans  &kp RGUI   &kp RALT  &kp RCTRL
+    &kp LSHFT   &kp DE_EQL &kp DE_MINS  &kp DE_PLUS &kp DE_LCBR   &kp DE_RCBR  &trans   &trans  &kp DE_LBRC &kp DE_RBRC  &kp DE_COMM   &kp DE_COLN  &kp DE_SLSH &kp DE_UNDS
+                         &kp LCTRL  &kp LALT  &kp LGUI   &trans   &kp SPACE        &kp RET   &trans  &kp RGUI   &kp RALT  &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
